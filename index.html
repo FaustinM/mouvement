@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Générateur de mouvement !</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="assets/main.css" rel="stylesheet">
+    <script src="assets/dicNC.js" defer></script>
+    <script src="assets/dicColor.js"></script>
+    <script>
+        let rand;
+        function updateNom(){
+            rand = dicoNomCoommun[Math.floor(Math.random() * dicoNomCoommun.length)];
+            let rand2 = dicColor[Math.floor(Math.random() * dicColor.length)];
+            document.getElementById("mouvement").textContent = rand.charAt(0).toUpperCase() + rand.substring(1).toLowerCase() + " " + rand2.nom;
+            document.getElementById("gen").style.background = rand2.hex;
+        }
+
+        function isScriptLoaded(src){
+            return !!document.querySelector('script[src="' + src + '"]');
+        }
+
+        function checkDic(){
+            if(isScriptLoaded("js/dicNC.js")){
+                document.getElementById("loader").style.display = "none";
+            }
+            else{
+                setTimeout(3000, checkDic())
+            }
+        }
+
+        function openInNewTab() {
+            if(rand){
+                var win = window.open("https://www.larousse.fr/dictionnaires/francais/"+rand , '_blank');
+                win.focus();
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="loader">
+    <image id="loaderImage" src="image/infinity.gif"></image>
+</div>
+<div id="gen" oncontextmenu="openInNewTab();return false" onclick="updateNom()">
+    <p id="clicDroit" onclick="openInNewTab();event.stopPropagation()">Clique droit sur la page pour voir la définition (ou cliquez ici) !</p>
+    <h1 id="mouvement">Cliquez !</h1>
+    <p id="copyright">Générateur par Faustin_</p>
+</div>
+<script>checkDic();</script>
+</body>
+</html>
