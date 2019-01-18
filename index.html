@@ -20,14 +20,14 @@
             return !!document.querySelector('script[src="' + src + '"]');
         }
 
-        function checkDic(){
+        /*function checkDic(){
             if(isScriptLoaded("assets/dicNC.js")){
                 document.getElementById("loader").style.display = "none";
             }
             else{
                 setTimeout(3000, checkDic())
             }
-        }
+        }*/
 
         function openInNewTab() {
             if(rand){
@@ -39,8 +39,8 @@
     </script>
 </head>
 <body>
-<div id="loader">
-    <image id="loaderImage" src="assets/infinity.gif"></image>
+<div style="display:none;" id="loader">
+    <image style="display:none;"  id="loaderImage" src="assets/infinity.gif"></image>
 </div>
 <div id="gen" oncontextmenu="openInNewTab();return false" onclick="updateNom()">
     <p id="clicDroit" onclick="openInNewTab();event.stopPropagation()">Clique droit sur la page pour voir la définition (ou cliquez ici) !</p>
