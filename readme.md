@@ -7,6 +7,3 @@ Une fonctionnalité intéressante permet d’apprendre du vocabulaire en ouvrant
 Le site est compatible tout appareil !
 
 [Première image du site](https://screenshotscdn.firefoxusercontent.com/images/20596cf2-8478-4c98-99e1-50edb68aee1c.png)
-
-
-https://screenshotscdn.firefoxusercontent.com/images/20596cf2-8478-4c98-99e1-50edb68aee1c.png
