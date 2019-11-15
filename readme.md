@@ -12,7 +12,7 @@ Le site est compatible avec tout appareil !
 ## La partie JavaScript
 Il y a deux fichiers :
 * Le dictionnaire de mots
-* Le dictionnaire de couleur s
+* Le dictionnaire de couleurs
 
 ## Les dépendances
 
